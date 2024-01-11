@@ -20,10 +20,14 @@ typedef struct quadraticEq {
 typedef struct quadraticResult {
 	float x1;
 	float x2;
+	float y;
 } quadraticResult;
 
 /* void solveLinearEq(linearEq *eq) */
 float getLinearY(linearEq *eq);
+void linearEqString(linearEq eq, char *res);
+
 quadraticResult getQuadraticY(quadraticEq *eq);
+void quadraticEqString(quadraticEq eq, char *res);
 
 # endif
