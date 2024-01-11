@@ -9,7 +9,7 @@ float getLinearY(linearEq *eq) {
 }
 
 void linearEqString(linearEq eq, char *res) {
-  sprintf(res, "%f * x %c %f = 0", eq.a, eq.b >= 0 ? '+' : ' ', eq.b);
+  sprintf(res, "%f * x %c %f = 0", eq.a, eq.b >= 0 ? '+' : '-', fabs(eq.b));
 }
 
 quadraticResult getQuadraticY(quadraticEq *eq) {
@@ -31,5 +31,5 @@ quadraticResult getQuadraticY(quadraticEq *eq) {
 }
 
 void quadraticEqString(quadraticEq eq, char *res) {
-  sprintf(res, "%f * x^2 %c %f * x %c %f = 0", eq.a, eq.b >= 0 ? '+' : ' ', eq.b, eq.c >= 0 ? '+' : ' ', eq.c);
+  sprintf(res, "%f * x^2 %c %f * x %c %f = 0", eq.a, eq.b >= 0 ? '+' : '-', fabs(eq.b), eq.c >= 0 ? '+' : '-', fabs(eq.c));
 }
